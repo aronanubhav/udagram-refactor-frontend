@@ -16,7 +16,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t udacity-frontend-1 .
-  - docker tag udacity-frontend aronanubhav/udacity-frontend-1:latest
+  - docker tag udacity-frontend-1 aronanubhav/udacity-frontend-1:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
