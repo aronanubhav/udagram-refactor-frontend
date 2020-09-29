@@ -15,10 +15,10 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t udagram-refactor-frontend .
-  - docker tag udagram-refactor-frontend mvrkrishna/udagram-refactor-frontend:latest
+  - docker build -t udacity-frontend .
+  - docker tag udacity-frontend aronanubhav/udacity-frontend:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push mvrkrishna/udagram-refactor-frontend
+  - docker push aronanubhav/udacity-frontend
 
