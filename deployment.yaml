@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: uda-frontend
+  name: udacity-frontend
   labels:
-    app: uda-frontend
+    app: udacity-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: uda-frontend
+      app: udacity-frontend
   template:
     metadata:
       labels:
-        app: uda-frontend
+        app: udacity-frontend
     spec:
       containers:
-      - name: udagram-refactor-frontend
-        image: mvrkrishna/udagram-refactor-frontend
+      - name: udacity-frontend
+        image: aronanubhav/udacity-frontend
         resources:
           limits:
             cpu: "1.5"
